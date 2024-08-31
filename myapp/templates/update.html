@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    {%  for i in obj %}
+    <form action="newdata" method="post">
+        {% csrf_token %}
+        <input type="text" value="{{i.id}}" hidden name="id">
+        <label for="n">Name:</label>
+        <input type="text" placeholder="enter the name" id="n" name="name" value="{{i.name}}"><br><br>
+        <label for="p">Password:</label>
+        <input type="password" placeholder="enter the password" id="p" name="pas" value="{{i.password}}"><br><br>
+       <button type="submit">Submit</button>
+    </form>
+{% endfor %}
+
+</center>
+</body>
+</html>

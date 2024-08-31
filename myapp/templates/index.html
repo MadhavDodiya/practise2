@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <form action="data1" method="post">
+        {% csrf_token %}
+        <label for="n">Name:</label>
+        <input type="text" placeholder="enter the name" id="n" name="name"><br><br>
+        <label for="p">Password:</label>
+        <input type="password" placeholder="enter the password" id="p" name="pas"><br><br>
+       <button type="submit">Submit</button>
+    </form>
+
+    <form action="display">
+        <button type="submit">show data</button>
+    </form>
+</center>
+</body>
+</html>
